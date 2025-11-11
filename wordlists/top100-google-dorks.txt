@@ -18,7 +18,7 @@ ext:env "JWT_SECRET" | intext:"Bearer eyJ"
 ext:inf | ext:ini | ext:java | ext:json | ext:key | ext:log | ext:lst | ext:mai
 (ext:json OR ext:yaml) ("api_key" OR "client_secret" OR "private_key")
 ext:log ("error" OR "exception" OR "trace") -inurl:changelog
-(ext:log OR ext:txt) (exception OR stacktrace OR "NullReferenceException") site:example.com "phpinfo()"
+(ext:log OR ext:txt) (exception OR stacktrace OR "NullReferenceException") "phpinfo()"
 ext:mbox | ext:mbx | ext:md | ext:mdb | ext:nsf | ext:odt | ext:old | ext:ora
 ext:pac | ext:passwd | ext:pcf | ext:pdf | ext:pem | ext:pgp | ext:pl | ext:plist
 ext:pps | ext:ppt | ext:pptx | ext:psw | ext:pwd | ext:rdp | ext:reg | ext:rtf
@@ -65,13 +65,13 @@ intitle:"Index of /database" | intitle:"index of" (backup OR db.sql) | intitle:"
 intitle:"index of" /docs | intitle:"Index of" "~ftp" | intitle:"index of" "~.htaccess" | intitle:"index of" "logins" | intitle:"index of" "logs" | intitle:"index of" "nda.pdf"
 intitle:"index of" | intitle:"index of" ~password | intitle:"index of" "~passwords" | intitle:"index of" ~private | intitle:"index of" /uploads
 intitle:”login” | intitle:Login | intitle:”password” | intitle: signin | intitle:”username”
-(intitle:"login" OR inurl:login OR inurl:signin) site:example.com (inurl:wp-admin OR inurl:/admin OR inurl:admin/login)
+(intitle:"login" OR inurl:login OR inurl:signin) | (inurl:wp-admin OR inurl:/admin OR inurl:admin/login)
 intitle:"server-status" | intitle:"powered by WordPress"
 inurl:access= | inurl:account= | inurl:action= | inurl:activity= | inurl:adm= | inurl:admin= | inurl:alter= | inurl:api= | inurl:year= inurl:&
 inurl:"/admin/config" | inurl:"/admin/config.php" | inurl:"/admin/configure" | inurl:"/admin" filetype:html | inurl:"admin" filetype:pdf
 inurl:"admin" filetype:xls | inurl:"admin" intext:"login" filetype:html | inurl:"/admin" intitle:"configuration" | inurl:"/admin" intitle:"dashboard"
 inurl:"/admin" intitle:"login" | inurl:"/admin_login" filetype:html | inurl:admin (login|panel|console) | inurl:"/admin" | inurl:"backup" | inurl:"/cgi-bin/"
-inurl:/admin site:example.com intitle:"index of"
+inurl:/admin intitle:"index of"
 inurl:api | inurl:login | inurl:api-docs | inurl:apidocs | inurl:api-explorer
 inurl:api_key= | inurl:arg= | inurl:auth= | inurl:begindate= | inurl:board= | inurl:callback= | inurl:cat= | inurl:categoryid= inurl:&
 inurl:"backup" filetype:mdb | inurl:"/backup" filetype:zip | inurl:"/backups" filetype:sql | inurl:"backup.zip" | inurl:"dump.sql" inurl:"*db" filetype:mdb | inurl:"/db/" filetype:sql
@@ -108,7 +108,7 @@ inurl:style= | inurl:swagger | inurl:table= | inurl:target= | inurl:temp= | inur
 inurl:to= | inurl:toggle= | inurl:token= | inurl:type= | inurl:unsubscribe_token= | inurl:update= | inurl:upload= | inurl:uploads= inurl:&
 inurl:uri= | inurl:url= | inurl:user= | inurl:userid= | inurl:username= | inurl:val= | inurl:validate= | inurl:view= | inurl:where= | inurl:window= inurl:&
 inurl:"/wp-admin/" intitle:"login" | inurl:"/wp-content/" intitle:"directory" | inurl:wp-content/uploads | inurl:"/wp-includes/" | inurl:"/wp-json/" intext:"application-passwords" | inurl:"/wp-json/" intext:"backup" "}}}" | inurl:"/wp-json" intext:"/connect" "endpoints" "}}}" | inurl:"/wp-json/" intext:"database" "}}}" | inurl:"/wp-json" intext:"/v3" "{{" "context" | inurl:"/wp-json" intext:"/v4" "{{" "context" | inurl:"/wp-json/v2" site:gov | inurl:"/wp-login.php"
-inurl:wp-content inurl:".aspx" -inurl:ashx site:example.com "X-Powered-By" "PHP"
+inurl:wp-content inurl:".aspx" -inurl:ashx "X-Powered-By" "PHP"
 inurl:wp- | inurl:"/wp-config.php" | inurl:wp-content | inurl:"/wp-content/uploads/"
 "kubeconfig" (ext:yaml OR ext:yml) | "PAN number" filetype:pdf | "Penetration Test Report" filetype:doc
 "not for public release" | "internal network topology"
