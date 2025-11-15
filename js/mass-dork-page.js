@@ -4,7 +4,6 @@ $(document).ready(function() {
         const dorkFormat = $('input[name="dork-format"]:checked').val();
         const dork = $('#dork').val();
         const targetsFile = $('#targets-file')[0].files[0];
-        const prefixStar = $('#prefix-star').is(':checked');
 
         if (!dork) {
             alert('Please enter a dork.');
@@ -24,10 +23,6 @@ $(document).ready(function() {
 
             targets.forEach(target => {
                 let currentTarget = target.trim();
-
-                if (prefixStar && !currentTarget.startsWith('*.')) {
-                    currentTarget = `*.${currentTarget}`;
-                }
 
                 let formattedDork;
                 if (dorkFormat === 'site:target') {
